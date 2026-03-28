@@ -1,0 +1,85 @@
+.teams-section {
+  padding: 120px 0;
+  background: var(--f1-dark);
+  position: relative;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(15, 15, 15, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.3s ease;
+}
+
+.team-card:hover {
+  border-color: var(--team-color);
+}
+
+.team-color-bar {
+  width: 4px;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.team-info {
+  flex: 1;
+  padding: 20px 16px;
+}
+
+.team-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
+}
+
+.team-drivers {
+  display: flex;
+  gap: 12px;
+}
+
+.driver-name {
+  font-size: 0.8rem;
+  color: rgba(240, 240, 240, 0.5);
+}
+
+.team-titles {
+  padding: 20px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.titles-count {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--f1-gold);
+  display: block;
+}
+
+.titles-label {
+  font-size: 0.7rem;
+  color: rgba(240, 240, 240, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+  .teams-section {
+    padding: 80px 0;
+  }
+}

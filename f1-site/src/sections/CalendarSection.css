@@ -1,0 +1,92 @@
+.calendar-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #111 0%, var(--f1-dark) 100%);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.race-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(15, 15, 15, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 16px;
+  cursor: default;
+  transition: border-color 0.3s ease;
+}
+
+.race-card:hover {
+  border-color: rgba(225, 6, 0, 0.3);
+}
+
+.race-round {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--f1-red);
+  background: rgba(225, 6, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.race-flag {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.race-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.race-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.race-city {
+  font-size: 0.75rem;
+  color: rgba(240, 240, 240, 0.4);
+}
+
+.race-date {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: rgba(240, 240, 240, 0.6);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.calendar-more {
+  text-align: center;
+  margin-top: 32px;
+  color: rgba(240, 240, 240, 0.4);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+  .calendar-section {
+    padding: 80px 0;
+  }
+}
